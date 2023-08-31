@@ -1,4 +1,5 @@
 import argparse
+import time
 
 from core.birthday_problem import BirthdayProblem
 
@@ -32,15 +33,28 @@ def main():
     # furthermore, you might run out of memory.
     bp = BirthdayProblem(
         people=args.people,   # 1_000_000_000
-        birthdays=args.birthdays   # (2 ** 256) - 1
+        birthdays=args.birthdays # (2 ** 256) - 1 == 115792089237316195423570985008687907853269984665640564039457584007913129639935
     )
+
+    # Print object.
+    print(bp)
+
+    # Start clock.
+    start = time.time()
 
     # Run solve method.
     data = bp.solve()
+    # Stop clock.
+    end = time.time()
+
+    # Print data.
     print(data)
 
     # Plot data.
     bp.plot_solution(df=data)
 
+    print(f"Elapsed time: {end - start}")
+
+    
 if __name__ == "__main__":
     main()

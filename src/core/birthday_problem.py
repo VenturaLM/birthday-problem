@@ -1,8 +1,8 @@
 import os
 
+import numpy as np
 import pandas as pd
 import plotly.express as px
-
 
 class BirthdayProblem:
     """
@@ -103,7 +103,7 @@ class BirthdayProblem:
             message = f"Success: '{result_dir}' created."
         except FileExistsError:
             message = f"'FileExistsError': '{result_dir}' already exists."
-        print(message)
+        # print(message)
 
         fig.write_image(result_path, format="svg")
         
@@ -114,24 +114,32 @@ class BirthdayProblem:
         """
         ### Description
         ---------------
-        Method to solve the birthday problem given the initialization parameters.
+        Method to solve the birthday problem given the initialization parameters. The total
+        computational complexity of this code may be:
+
+        `O(self.people) + O(self.people) + O(1) + O(self.people^2)` 
+        
+        thus,
+
+        `2 * O(self.people) + O(1) + O(self.people^2)`
         """
         # Probability.
         p = float(1)
 
-        # # List saving the amount of participants.
-        people_list = list(range(1, self.people + 1))
+        # List saving the amount of participants.
+        people_array = np.array(list(range(1, self.people + 1)))
 
         # List saving the probabilities.
-        p_list = []
+        p_array = np.array(list())
 
         # Compute probability for each birthday.
         for i in range(1, self.people + 1):
             p = p * (self.birthdays + 1 - i) / self.birthdays
 
-            p_list.append(float(1) - p)
+            p_array = np.append(p_array, float(1) - p)
 
         # Save data within Pandas DataFrame.
-        df = pd.DataFrame({"probability": p_list, "people": people_list})
+        data = {"probability": p_array, "people": people_array}
+        df = pd.DataFrame(data)
 
         return df
