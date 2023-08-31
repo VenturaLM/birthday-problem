@@ -16,8 +16,8 @@ This paradox demonstrates how our intuitions about probabilities can be deceptiv
 # Goal
 The objective of this project is to explain on X (formerly Twitter) how the birthday paradox can be used to calculate the probability that at least two private keys will collide in Bitcoin.
 
-[!WARNING]
-X thread: To be posted.
+> **Warning**
+> X thread: To be posted.
 
 # Requirements
 Open a terminal in the project directory at `birthday_problem/` and type:
