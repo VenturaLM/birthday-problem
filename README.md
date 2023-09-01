@@ -30,8 +30,8 @@ Open a terminal in the project directory at `birthday_problem/` and type:
 # Estimating probabilities of Bitcoin PK collision
 If you want to estimate some probabilities of private key collision try to modify `p`.
 
-[!WARNING]
-Be cautious when increasing the parameter size: execution times can become lengthy, and furthermore, you might run out of memory.
+> **Warning**
+> Be cautious when increasing the parameter size: execution times can become lengthy, and furthermore, you might run out of memory.
 
     python3 src/main.py -p 1_000_000 -b 115792089237316195423570985008687907853269984665640564039457584007913129639935
 
