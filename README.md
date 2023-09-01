@@ -33,6 +33,8 @@ If you want to estimate some probabilities of private key collision try to modif
 > **Warning**
 > Be cautious when increasing the parameter size: execution times can become lengthy, and furthermore, you might run out of memory.
 
+![Complexity example](result/complexity_10000_1000000_10000.png)
+
     python3 src/main.py -p 1_000_000 -b 115792089237316195423570985008687907853269984665640564039457584007913129639935
 
 # References
