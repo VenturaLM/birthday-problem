@@ -14,10 +14,7 @@ Even in a relatively small group, like around 23 people, the probability that at
 This paradox demonstrates how our intuitions about probabilities can be deceptive. We often underestimate how quickly the probability of coincidences increases as we add more elements to the group. It's an interesting example of how mathematics can contradict our initial intuition.
 
 # Goal
-The objective of this project is to explain on X (formerly Twitter) how the birthday paradox can be used to calculate the probability that at least two private keys will collide in Bitcoin.
-
-[!WARNING]
-X thread: To be posted.
+The objective of this project is to explain on X (formerly Twitter) how the birthday paradox can be used to calculate the probability that at least two private keys will collide in Bitcoin. You can access to X thread [here](https://twitter.com/VentuLM/status/1697587996344942972) (Spanish).
 
 # Requirements
 Open a terminal in the project directory at `birthday_problem/` and type:
