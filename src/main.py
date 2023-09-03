@@ -1,7 +1,7 @@
 import argparse
 import time
 
-from core.birthday_problem import BirthdayProblem
+from algorithm.birthday_problem import BirthdayProblem
 
 
 def main():
